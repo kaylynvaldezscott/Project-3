@@ -1,1 +1,32 @@
 # Project-3
+**Submitted by** Alyshia Kiczma, Kaylyn Valdez-Scott, Nasir Qadri, and Arshdeep Khurana **Date:** 12-DEC-2023 **Project Title:** Project 3 - Explore NYC, Mapping Landmarks & Airbnb Lodgings Around the City.
+
+Purpose of project 3 is to tell a story using data visualizations. 
+
+We began by webscraping this Wikipedia page, "https://en.wikipedia.org/wiki/List_of_National_Historic_Landmarks_in_New_York_City", that gave a list of historical landmarks around New York City. To see we scraping data, visit file labeled "project 3 Wikipedia Web Scrape - Kaylyn Valdez-Scott". From scraping this data, we created a dataframe containing Landmark Name, geographical location (latitude & longitude), the County, and a description of each Landmark. This dataset has 116 rows. From here, we exported this dataframe into a CSV file. 
+
+Next, we deployed this CSV file using Python Flask. 
+
+
+
+
+
+Your visualization must include a Python Flask-powered API, HTML/CSS, JavaScript, and at least one database (SQL, MongoDB, SQLite, etc.).
+
+Your project should fall into one of the following three tracks:
+
+A combination of web scraping and Leaflet or Plotly
+
+A dashboard page with multiple charts that update from the same data
+
+A server that performs multiple manipulations on data in a database prior to visualization (must be approved)
+
+Your project should include at least one JS library that we did not cover.
+
+Your project must be powered by a dataset with at least 100 records.
+
+Your project must include some level of user-driven interaction (e.g., menus, dropdowns, textboxes).
+
+Your final visualization should ideally include at least three views.
+
+For this project, you can focus your efforts within a specific industry, as detailed in the following examples.
