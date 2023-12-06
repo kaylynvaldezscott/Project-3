@@ -3,7 +3,7 @@
 
 Purpose of project 3 is to tell a story using data visualizations. 
 
-We began by webscraping this Wikipedia page, "https://en.wikipedia.org/wiki/List_of_National_Historic_Landmarks_in_New_York_City", that gave a list of historical landmarks around New York City. To see we scraping data, visit file labeled "project 3 Wikipedia Web Scrape - Kaylyn Valdez-Scott". From scraping this data, we created a dataframe containing Landmark Name, geographical location (latitude & longitude), the County, and a description of each Landmark. This dataset has 116 rows. From here, we exported this dataframe into a CSV file. 
+We began by webscraping this Wikipedia page, "https://en.wikipedia.org/wiki/List_of_National_Historic_Landmarks_in_New_York_City", that gave a list of historical landmarks around New York City. To see we scraping data, visit file labeled "project 3 Wikipedia Web Scrape-with class work.ipynb". From scraping this data, we created a dataframe containing Landmark Name, geographical location (latitude & longitude), the County, and a description of each Landmark. This dataset has 116 rows. From here, we exported this dataframe into a CSV file. 
 
 <img width="1419" alt="Screenshot 2023-12-05 at 7 13 49 PM" src="https://github.com/kaylynvaldezscott/Project-3/assets/141589524/d6e3f7b2-f9ff-4b6c-82b1-e6304641f15c">
 
