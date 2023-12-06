@@ -7,7 +7,9 @@ We began by webscraping this Wikipedia page, "https://en.wikipedia.org/wiki/List
 
 <img width="1419" alt="Screenshot 2023-12-05 at 7 13 49 PM" src="https://github.com/kaylynvaldezscott/Project-3/assets/141589524/d6e3f7b2-f9ff-4b6c-82b1-e6304641f15c">
 
-<img width="1186" alt="Screenshot 2023-12-05 at 7 19 26 PM" src="https://github.com/kaylynvaldezscott/Project-3/assets/141589524/3c2d1d1c-333e-4de8-8671-f4c8511d4e11">
+<img width="1159" alt="Screenshot 2023-12-06 at 2 59 06 PM" src="https://github.com/kaylynvaldezscott/Project-3/assets/141589524/7897cdfe-b30d-43f0-8c20-e27ea13036ff">
+
+
 
 
 
