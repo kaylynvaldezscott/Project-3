@@ -1,86 +1,48 @@
-import numpy as np
+ifrom flask import Flask, jsonify, render_template
+import pandas as pd 
 
-import sqlalchemy
-from sqlalchemy.ext.automap import automap_base
-from sqlalchemy.orm import Session
-from sqlalchemy import create_engine, func
-
-from flask import Flask, jsonify
-
-
-#################################################
-# Database Setup
-#################################################
-engine = create_engine("sqlite:///titanic.sqlite")
-##need help with howt o do this from CSV
-
-# reflect an existing database into a new model
-Base = automap_base()
-# reflect the tables
-Base.prepare(autoload_with=engine)
-
-# Save reference to the table
-Passenger = Base.classes.passenger
-
-#################################################
-# Flask Setup
-#################################################
 app = Flask(__name__)
 
-
-#################################################
-# Flask Routes
-#################################################
-
 @app.route("/")
-def welcome():
-    """List all available api routes."""
-    return (
-        f"Available Routes:<br/>"
-        f"/api/v1.0/nyclandmarks<br/>"
-        f"/api/v1.0/airbnbs"
-    )
+def index(): 
+    return render_template("index.html")
 
 
-@app.route("/api/v1.0/nyclandmarks")
-def names():
-    # Create our session (link) from Python to the DB
-    session = Session(engine)
+@app.route("/api/nyclandmarks")
+def nyclandmarks():
 
-    """List of New York City Historical Landmarks"""
-    # Query all landmarks
-    results = session.query(Extracted_Landmark_data.location_name).all()
+    df = pd.read_csv('Extracted_landmark_data.csv')
+    output_data = df.to_dict()
+    keys = output_data.keys()
+    print(keys)
+    return jsonify(output_data)
 
-    session.close()
+@app.route("/api/airbnbs")
+def nyclandmarks():
 
-    # Convert list of tuples into normal list
-    all_names = list(np.ravel(results))
+    df = pd.read_csv('airbnb_data.csv')
+    output_data = df.to_dict()
+    keys = output_data.keys()
+    print(keys)
+    return jsonify(output_data)
 
-    return jsonify(all_names)
+# @app.route("/api/airbnbs")
+# def airbnbs():
 
+#     df = pd.read_csv('airbnb_data.csv')
+#     sample_perosnaldf = df.sample(n=10000)
+#     personal_totals = sample_perosnaldf['gender']
+#     output_personal = personal_totals.tolist()
+#     return jsonify(output_personal)
+   
+# @app.route("/api/Fraud_Merch")
+# def api_Fraud_Merch():
 
-@app.route("/api/v1.0/airbnbs")
-def airbnbs():
-    # Create our session (link) from Python to the DB
-    session = Session(engine)
+#     df = pd.read_csv('Fraud_Merch.csv')
+#     sample_df = df.sample(n=10000) #sample of 1000 values from the Data Frame
+#     category_totals = sample_df.groupby('category')['amt'].sum().reset_index()
+#     output_merchdata = category_totals.to_dict(orient="records")
+#     return jsonify(output_merchdata)
 
-    """List of Airbnbs"""
-    # Query all airbnbs
-    results = session.query(airbnb_data.ID, airbnb_data.neighbourhood_group, airbnb_data.price).all()
-
-    session.close()
-
-    # Create a dictionary from the row data and append to a list of all_passengers
-    all_passengers = []
-    for name, age, sex in results:
-        passenger_dict = {}
-        passenger_dict["name"] = name
-        passenger_dict["age"] = age
-        passenger_dict["sex"] = sex
-        all_passengers.append(passenger_dict)
-
-    return jsonify(all_passengers)
-
-
-if __name__ == '__main__':
-    app.run(debug=True)
+if __name__ == "__main__":
+    app.run()
