@@ -1,0 +1,15 @@
+html {
+    font-family: 'Corben', Georgia, Times, serif;
+  }
+  body {
+    background-color: rgb(115, 232, 127);
+  }
+  
+  .row {
+    text-align: center;
+  }
+  
+  .well {
+    text-align: center;
+    align-content: center;
+  }
