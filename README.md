@@ -9,32 +9,11 @@ We began by webscraping this Wikipedia page, "https://en.wikipedia.org/wiki/List
 
 <img width="1159" alt="Screenshot 2023-12-06 at 2 59 06 PM" src="https://github.com/kaylynvaldezscott/Project-3/assets/141589524/7897cdfe-b30d-43f0-8c20-e27ea13036ff">
 
+Next, we began creating visualizations to map our previous Airbnb data from Project 1, and the new webscraped wikipedia landmarks. To see code for JavaScript mapping, visit file labeled "logic.js". On this map, the user is able to select what they woul like to see with a layer menu. They can select seeing the Airbnb's in NYC, or the major landmarks that have descriptions available. 
 
 
 
-
-Next, we deployed this CSV file using Python Flask. 
-
+Lastly, we deployed these visualizations through Python Flask to see them on a live website (visit file labeled "index.html"). On this website, there is a dropdown menu allowing the user to choose their desired map. 
 
 
 
-
-Your visualization must include a Python Flask-powered API, HTML/CSS, JavaScript, and at least one database (SQL, MongoDB, SQLite, etc.).
-
-Your project should fall into one of the following three tracks:
-
-A combination of web scraping and Leaflet or Plotly
-
-A dashboard page with multiple charts that update from the same data
-
-A server that performs multiple manipulations on data in a database prior to visualization (must be approved)
-
-Your project should include at least one JS library that we did not cover.
-
-Your project must be powered by a dataset with at least 100 records.
-
-Your project must include some level of user-driven interaction (e.g., menus, dropdowns, textboxes).
-
-Your final visualization should ideally include at least three views.
-
-For this project, you can focus your efforts within a specific industry, as detailed in the following examples.
