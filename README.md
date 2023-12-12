@@ -11,7 +11,7 @@ We began by webscraping this Wikipedia page, "https://en.wikipedia.org/wiki/List
 
 
 
-Next, we began creating visualizations to map our previous Airbnb data from Project 1, and the new webscraped wikipedia landmarks. To see code for JavaScript mapping, visit file labeled "logic.js". On this map, the user is able to select what they would like to see with a layer menu. They can select seeing the Airbnb's in NYC, or the major landmarks that have descriptions available. The difference in map is also visible by the varying colour in markers.  
+Next, we began creating visualizations to map our previous Airbnb data from Project 1, and the new webscraped wikipedia landmarks. To see code for JavaScript mapping, visit file labeled "logic.js". On this map, the user can select seeing the Airbnb's in NYC, or the major landmarks that have descriptions available. The difference in map is also visible by the varying colour in markers. Blue markers are listed Airbnb's, and red dots are landkmarks. 
 
 Additionally, an interactive visualization was created using the chart.js dictionary which provides a visual of the number of propeties in the various County's and provides data points once hovering over each of the sections
 
