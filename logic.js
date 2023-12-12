@@ -20,7 +20,7 @@
 function displayairbnbmap() {
   // Define the JSON URL
   let airbnbURL = "/api/airbnbs";
-  d3.csv("project3.csv").then(function(data){
+  d3.json(airbnbURL).then(function(data){
     
     data.forEach(function(d){
       let lat=d.lat;
@@ -36,7 +36,7 @@ function displayLandmarksmap() {
   // Define the JSON URL
   let landmarksURL = "/api/nyclandmarks";
   // Load the JSON data using d3
-  d3.csv("Extracted_Landmark_data.csv").then(function(data){
+  d3.json(landmarksURL).then(function(data){
     data.forEach(function(d){
       let lat2 = d.Latitude;
       let long2 = d.Longitude;
