@@ -1,0 +1,73 @@
+
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+<canvas id="myChart"></canvas>
+
+
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/PapaParse/5.3.0/papaparse.min.js"></script>
+
+<script>
+  
+  fetch('Extracted_Landmark_data.csv')
+    .then(response => response.text())
+    .then(data => {
+      
+      const parsedData = Papa.parse(data, { header: true });
+
+      
+      createChart(parsedData);
+    });
+
+
+    function createChart(data) {
+    const labels = [...new Set(data.data.map(row => row.County))]; 
+    const counts = labels.map(label => data.data.filter(row => row.County === label).length);
+
+    var ctx = document.getElementById('myChart').getContext('2d');
+    var myChart = new Chart(ctx, {
+      type: 'doughnut',
+      data: {
+        labels: labels,
+        datasets: [{
+          data: counts,
+          backgroundColor: [
+            'rgba(250, 94, 130, 0.5)',
+            'rgba(51, 169, 235, 0.5)',
+            'rgba(265, 202, 83, 0.5)',
+            'rgba(10, 240, 100, 0.5)',
+           
+          ],
+          borderColor: [
+            'rgba(250, 94, 130, 0.5)',
+            'rgba(51, 169, 235, 0.5)',
+            'rgba(265, 202, 83, 0.5)',
+            'rgba(10, 240, 100, 0.5)',  
+          ],
+          borderWidth: 1
+        }]
+      },
+      options: {
+        cutout: '70%',
+        plugins: {
+            legend: {
+            display: false, 
+          },
+          title: {
+            display: true,
+            text: 'Number of Air  BnB Properties per County',
+            fontSize: 16
+          }
+        }
+      }
+    });
+  }
+
+  
+</script>
+
+
+  
+  
+
+
