@@ -17,5 +17,9 @@ Next, we began creating visualizations to map our previous Airbnb data from Proj
 
 Lastly, we deployed these visualizations through Python Flask to see them on a live website (visit file labeled "index.html"). On this website, there is a dropdown menu allowing the user to choose their desired map. 
 
+Additionally, a visualization waws created using the chart.js dictionary
+
+![image](https://github.com/kaylynvaldezscott/Project-3/assets/142273069/ccee22b0-e7d1-4334-9f00-76e9b6235749)
+
 
 
