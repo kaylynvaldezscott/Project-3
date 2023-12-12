@@ -16,7 +16,10 @@
     attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
   }).addTo(map);
 
-
+// Function to display the airbnbs map
+function displayairbnbmap() {
+  // Define the JSON URL
+  let airbnbURL = "/api/airbnbs";
   d3.csv("project3.csv").then(function(data){
     
     data.forEach(function(d){
@@ -24,11 +27,15 @@
       let long =d.long;
       let marker=L.marker([lat,long]).bindPopup("<h3> Neighborhood: " +d.neighbourhood+"<h3> price: "+d.price)
       marker.addTo(map);
-
+    }
     });
 
-  });
-
+  
+// Function to display the landmarks map
+function displayLandmarksmap() {
+  // Define the JSON URL
+  let landmarksURL = "/api/nyclandmarks";
+  // Load the JSON data using d3
   d3.csv("Extracted_Landmark_data.csv").then(function(data){
     data.forEach(function(d){
       let lat2 = d.Latitude;
@@ -39,10 +46,10 @@
         fillOpacity: 0.75,
         radius: 50
       }).addTo(map).bindPopup("<h3> Landmark: " + d.Location_Name+ "<h3> Description: "+d.Description);
-        });
+    }    
+    });
 
-  });
-
+  
 
 
 

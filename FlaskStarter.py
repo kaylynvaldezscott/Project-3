@@ -18,7 +18,7 @@ def nyclandmarks():
     return jsonify(output_data)
 
 @app.route("/api/airbnbs")
-def nyclandmarks():
+def nycairbnbs():
 
     df = pd.read_csv('airbnb_data.csv')
     output_data = df.to_dict()
